@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Korean Cars — Madranol Motors UG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root{--navy:#0A192F;--orange:#FF7A00;--muted:#6b7280;--container:1000px}
+    *{box-sizing:border-box}body{font-family:Inter,system-ui,Arial;margin:0;color:#111}
+    .container{max-width:var(--container);margin:0 auto;padding:1rem}
+    header{background:var(--navy);color:#fff;padding:.8rem 1rem}
+    a.logo{color:#fff;font-weight:700;text-decoration:none}
+    main{padding:2rem 1rem}
+    h1{color:var(--navy);margin:0 0 1rem}
+    .brand {display:flex;gap:1rem;align-items:flex-start;padding:1rem;border-radius:10px;border:1px solid #eee;margin-bottom:1rem;background:#fff;box-shadow:0 6px 18px rgba(10,25,47,0.04)}
+    .brand-logo{width:84px;height:84px;flex:0 0 84px;display:flex;align-items:center;justify-content:center;border-radius:8px;overflow:hidden;border:1px solid #f0f0f0}
+    .brand-logo img{max-width:100%;max-height:100%}
+    .brand-body h2{margin:0 0 .25rem;font-size:1.1rem;color:#000}
+    .brand-body p{margin:.25rem 0 .75rem;color:var(--muted)}
+    .gallery{display:flex;gap:.6rem;flex-wrap:wrap}
+    .card{width:calc(20% - .6rem);min-width:100px;background:#fafafa;border-radius:8px;padding:6px;border:1px solid #eee;cursor:pointer}
+    .card img{width:100%;height:80px;object-fit:cover;border-radius:6px;transition:transform .3s ease}
+    .card img:hover{transform:scale(1.05)}
+    .card small{display:block;margin-top:.5rem;color:#444}
+    
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--orange);padding:12px 18px;border-radius:30px;box-shadow:0 6px 18px rgba(0,0,0,0.15);text-decoration:none}
+    .whatsapp-float .label{font-weight:700;color:#000}
+    .scroll-top{position:fixed;bottom:20px;left:20px;background:var(--orange);color:#000;border:none;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.15);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s}
+    .scroll-top.show{opacity:1;pointer-events:auto}
+
+    /* Lightbox */
+    #lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:9999}
+    #lightbox img{max-width:90%;max-height:90%;border-radius:10px;box-shadow:0 0 15px rgba(255,255,255,0.2)}
+    
+    @media(max-width:880px){ .card{width:calc(50% - .6rem)} .brand{flex-direction:column} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="logo" href="index.html">Madranol Motors UG</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Korean Cars</h1>
+    <p style="color:var(--muted)">Imported Korean brands we handle — click any image to view in full.</p>
+
+    <!-- Hyundai -->
+    <section class="brand" id="hyundai">
+      <div class="brand-logo"><img src="assests/korean/hyundai.png" alt="Hyundai logo"></div>
+      <div class="brand-body">
+        <h2>Hyundai</h2>
+        <p>Popular, affordable, and widely serviced.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/hyundai/electra.jpg" alt="Elantra"><small>Elantra — sedan</small></div>
+          <div class="card"><img src="assests/cars/hyundai/tucson.jpg" alt="Tucson"><small>Tucson — SUV</small></div>
+          <div class="card"><img src="assests/cars/hyundai/ff.jpg" alt="Santa Fe"><small>Santa Fe — family SUV</small></div>
+          <div class="card"><img src="assests/cars/hyundai/accent.jpg" alt="Accent"><small>Accent — compact</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kia -->
+    <section class="brand" id="kia">
+      <div class="brand-logo"><img src="assests/korean/kia.png" alt="Kia logo"></div>
+      <div class="brand-body">
+        <h2>Kia</h2>
+        <p>Stylish models with competitive warranties.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/kia/sportage.jpg" alt="Sportage"><small>Sportage — SUV</small></div>
+          <div class="card"><img src="assests/cars/kia/rio.jpg" alt="Rio"><small>Rio — compact</small></div>
+          <div class="card"><img src="assests/cars/kia/cerato.jpg" alt="Cerato"><small>Cerato — sedan</small></div>
+          <div class="card"><img src="assests/cars/kia/seltos.jpg" alt="Seltos"><small>Seltos — crossover</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/256778348461" target="_blank"><span class="label">WhatsApp Me</span></a>
+  <button class="scroll-top" id="scrollTopBtn"><span class="material-icons">arrow_upward</span></button>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <img src="" alt="Car image">
+  </div>
+
+  <script>
+    // Scroll-to-top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', ()=> {
+      if(window.scrollY > 300) scrollBtn.classList.add('show'); else scrollBtn.classList.remove('show');
+    });
+    scrollBtn.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Lightbox viewer
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.style.display = 'none');
+  </script>
+</body>
+</html>

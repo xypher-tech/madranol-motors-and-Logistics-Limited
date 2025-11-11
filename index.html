@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Madranol Motors & Logistics Limited</title>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="logo" href="#">Madranol Motors & Logistics Limited</a>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#brands">Brand Gallery</a>
+        <a href="#registration">C.O.R</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-ctas">
+        <button class="btn btn-quote" id="getQuoteBtn">Get a Quote</button>
+        <button class="btn btn-services" onclick="location.href='#services'">View Services</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="material-icons">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-copy">
+        <h1>Your trusted Partner in Car Shipping from Asia to Uganda</h1>
+        <p class="sub">From Hong Kong &amp; Japan to Kampala — Shipping, clearance &amp; delivery made easy</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" onclick="location.href='#services'">View Services</button>
+          <button class="btn btn-secondary" id="quoteCta">Get a Quote</button>
+        </div>
+        <ul class="hero-features">
+          <li>7 years experience</li>
+          <li>Trusted imports from Japan &amp; Hong Kong</li>
+          <li>Secure clearance &amp; delivery</li>
+        </ul>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <!-- subtle background image via CSS; keep empty for accessibility -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Who Madranol is</h3>
+          <p>Madranol Motors is a Kampala-based car importation partner specializing in shipping vehicles from Hong Kong and Japan and handling clearance, delivery and after-sales support with transparency and care.</p>
+
+          <h3>Mission &amp; Vision</h3>
+          <p>Mission: To provide transparent, affordable and trusted car importation services that connect Ugandan buyers with high-quality vehicles from Asia.
+          <br>Vision: To be Uganda's most trusted and accessible vehicle import partner.</p>
+
+          <h3>Experience &amp; Expertise</h3>
+          <p>With 7 years of experience, our team handles sourcing, shipping, Mombasa clearance and delivery across Uganda.</p>
+        </div>
+
+        <div class="about-carousel">
+          <div class="carousel-track" id="aboutCarousel">
+            <img src="images/car1.jpeg" alt="Quality cars" />
+            <img src="images/car2.jpeg" alt="Vehicle checking" />
+            <img src="images/car3.jpeg" alt="Shipping" />
+            <img src="images/car4.jpg" alt="Delivery" />
+          </div>
+          <div class="carousel-indicators" id="aboutIndicators"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="material-icons service-icon">local_shipping</span>
+          <h4>Car Shipping &amp; Importation</h4>
+          <p>Full shipping from Hong Kong &amp; Japan to Mombasa/Kampala with tracking and updates.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="material-icons service-icon">account_balance</span>
+          <h4>Clearance at Mombasa</h4>
+          <p>Professional clearance handling ensuring fast release and minimized delays.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="material-icons service-icon">payments</span>
+          <h4>Delivery Payment Plans</h4>
+          <p>Flexible installment plans and payment support to make owning a car easier.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="material-icons service-icon">build</span>
+          <h4>Car Servicing &amp; Maintenance</h4>
+          <p>Maintenance and inspection services to keep your car in top condition.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="material-icons service-icon">search</span>
+          <h4>Vehicle Sourcing</h4>
+          <p>We help you find the right car within your budget and specification.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="material-icons service-icon">directions_car</span>
+          <h4>Car Hire in Uganda</h4>
+          <p>Short and long-term hire options available for individuals and businesses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why" class="section why">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-copy">
+          <h2>Why Choose Us</h2>
+          <ul class="why-list">
+            <li><strong>Affordable instalment plans</strong> — Pay comfortably with our plans.</li>
+            <li><strong>Trusted Import Partner</strong> — Years of reliable imports.</li>
+            <li><strong>Secure Clearance &amp; Delivery</strong> — We guarantee secure handling.</li>
+            <li><strong>Professional customer services</strong> — Responsive and helpful team.</li>
+            <li><strong>High quality cars</strong> — Carefully sourced from Japan &amp; Hong Kong.</li>
+          </ul>
+          <button class="btn btn-whatsapp" id="whyWhatsapp">Chat on WhatsApp</button>
+        </div>
+
+        <div class="why-visual" aria-hidden="true">
+          <!-- decorative, navy background handled in CSS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND GALLERY -->
+  <section id="brands" class="section brands">
+    <div class="container">
+      <h2>Brand Gallery</h2>
+      <p>Explore cars we import from different regions around the world.</p>
+
+      <ul class="brand-list">
+        <li><a href="japanese.html">Japanese Cars</a></li>
+        <li><a href="korean.html">Korean Cars</a></li>
+        <li><a href="swedish.html">Swedish Cars</a></li>
+        <li><a href="american.html">American Cars</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REGISTRATION STATUS -->
+  <section id="registration" class="section registration">
+    <div class="container">
+      <h2>Registration Status</h2>
+      <div class="registration-content">
+        <div class="registration-text">
+            <p>Madranol Motors & Logistics Limited is a fully registered and recognized business under the Uganda Registration Services Bureau (URSB). We operate legally and transparently, ensuring every client works with a trusted and certified importation partner.</p>
+            <p><strong>URSB Certificate of Registration:</strong> Proof of our commitment to compliance and professionalism.</p>
+          </div>
+          <div class="registration-image">
+            <img src="images/REGISTRATION_CERTIFICATE.jpg" alt="URSB Certificate of Registration" />
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+
+      <div class="contact-grid">
+        <div class="contact-form-wrap">
+          <!-- Inquiry form laid out in a table-style look (no DB) -->
+          <form id="inquiryForm" class="inquiry-form" novalidate>
+            <table>
+              <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name" required minlength="2"/></td>
+              </tr>
+              <tr>
+                <td><label for="phone">Phone</label></td>
+                <td><input type="tel" id="phone" name="phone" required pattern="[+0-9\s-]{7,}" placeholder="e.g. +256 7xx xxx xxx"/></td>
+              </tr>
+              <tr>
+                <td><label for="cartype">Car type</label></td>
+                <td><input type="text" id="cartype" name="cartype" required/></td>
+              </tr>
+              <tr>
+                <td><label for="message">Message</label></td>
+                <td><textarea id="message" name="message" rows="4" required></textarea></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="form-actions">
+                  <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+                  <button type="reset" class="btn btn-ghost">Reset</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <h3>Get in touch</h3>
+          <p><span class="material-icons small">location_on</span> Office: Kampala — Uganda</p>
+          <p><span class="material-icons small">phone</span> <a href="tel:+256741393600">+256 741 393 600</a></p>
+          <p><span class="material-icons small">chat</span> <a id="waLink" href="tel:+256778348461">WhatsApp Owner</a></p> <!-- Missing watsapp link-->
+
+          <div class="contact-ctas">
+            <button class="btn btn-call" onclick="location.href='tel:+256741393600'">Call</button>
+            <button class="btn btn-whatsapp" id="WhatsappButton">WhatsApp</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Madranol Motors UG</h4>
+        <p>Car importation + Shipping + clearance + delivery + extra services.</p>
+      </div>
+
+      <div>
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Follow us</h4>
+        <div class="social-media">
+            <a href="https://www.tiktok.com/@mardranolmotorsuganda" target="_blank" class="social-item">
+                <img src="images/TikTok.png" alt="TikTok">
+                <span>TikTok</span>
+            </a>
+            <a href="https://youtube.com/@mardra-ug?si=wPhQI5-3_teHtg7c" target="_blank" class="social-item">
+                <img src="images/youtube.png" alt="YouTube">
+                <span>YouTube</span>
+            </a>
+        </div>
+        <p class="location"><span class="material-icons small">location_on</span> Kampala, Uganda</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Madranol Motors UG. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chat -->
+  <a class="whatsapp-float" id="whatsappFloat" href="#" aria-label="Chat on WhatsApp">
+    <span class="material-icons">whatsapp</span>
+    <span class="label">WhatsApp Me</span>
+  </a>
+
+  <!-- scroll to top -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

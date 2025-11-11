@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Japanese Cars — Madranol Motors UG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root{--navy:#0A192F;--orange:#FF7A00;--muted:#6b7280;--container:1000px}
+    *{box-sizing:border-box}body{font-family:Inter,system-ui,Arial;margin:0;color:#111}
+    .container{max-width:var(--container);margin:0 auto;padding:1rem}
+    header{background:var(--navy);color:#fff;padding:.8rem 1rem}
+    header .top{display:flex;align-items:center;gap:1rem}
+    a.logo{color:#fff;font-weight:700;text-decoration:none}
+    main{padding:2rem 1rem}
+    h1{color:var(--navy);margin:0 0 1rem}
+    .brand {display:flex;gap:1rem;align-items:flex-start;padding:1rem;border-radius:10px;border:1px solid #eee;margin-bottom:1rem;background:#fff;box-shadow:0 6px 18px rgba(10,25,47,0.04)}
+    .brand-logo{width:84px;height:84px;flex:0 0 84px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;overflow:hidden;border:1px solid #f0f0f0}
+    .brand-logo img{max-width:100%;max-height:100%;display:block}
+    .brand-body{flex:1}
+    .brand-body h2{margin:0 0 .25rem;font-size:1.1rem;color:#000}
+    .brand-body p{margin:.25rem 0 .75rem;color:var(--muted)}
+    .gallery{display:flex;gap:.6rem;flex-wrap:wrap}
+    .card{width:calc(20% - .6rem);min-width:100px;background:#fafafa;border-radius:8px;overflow:hidden;text-align:center;padding:6px;border:1px solid #eee;cursor:pointer}
+    .card img{width:100%;height:80px;object-fit:cover;display:block;border-radius:6px;transition:transform .3s ease}
+    .card img:hover{transform:scale(1.05)}
+    .card small{display:block;margin-top:.5rem;color:#444}
+
+    /* Floating WhatsApp & Scroll */
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:var(--orange);padding:12px 18px;border-radius:30px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.15);text-decoration:none}
+    .whatsapp-float .label{font-weight:700;color:#000}
+    .scroll-top{position:fixed;bottom:20px;left:20px;background:var(--orange);color:#000;border:none;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.15);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s,transform .2s;animation:floatUp 3s ease-in-out infinite}
+    .scroll-top.show{opacity:1;pointer-events:auto}
+    .scroll-top:hover{transform:scale(1.06)}
+    @keyframes floatUp{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+    /* Lightbox */
+    #lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:9999}
+    #lightbox img{max-width:90%;max-height:90%;border-radius:10px;box-shadow:0 0 15px rgba(255,255,255,0.2)}
+    #lightbox:target{display:flex}
+
+    /* responsive */
+    @media(max-width:880px){
+      .card{width:calc(50% - .6rem)}
+      .brand{flex-direction:column;align-items:flex-start}
+      .brand-logo{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <a class="logo" href="index.html">Madranol Motors UG</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Japanese Cars</h1>
+    <p style="color:var(--muted)">Brands we import from Japan — click any image to view in full.</p>
+
+    <!-- Toyota -->
+    <section class="brand" id="toyota">
+      <div class="brand-logo"><img src="assests/japanese/toyota.png" alt="Toyota logo"></div>
+      <div class="brand-body">
+        <h2>Toyota</h2>
+        <p>Reliable and fuel-efficient models — popular across Uganda.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/toyota/harrier.jpg" alt="Toyota Harrier"><small>Harrier - efficient commuter</small></div>
+          <div class="card"><img src="assests/cars/toyota/rav4.jpg" alt="Toyota RAV4"><small>RAV4 - compact SUV</small></div>
+          <div class="card"><img src="assests/cars/toyota/landcruiser.jpg" alt="Toyota Land Cruiser"><small>Land Cruiser - rugged & durable</small></div>
+          <div class="card"><img src="assests/cars/toyota/prius.jpg" alt="Toyota Prius"><small>Prius - hybrid economy</small></div>
+          <div class="card"><img src="assests/cars/toyota/drone.jpg" alt="Toyota Hiace"><small>Hiace - spacious van</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honda -->
+    <section class="brand" id="honda">
+      <div class="brand-logo"><img src="assests/japanese/honda.png" alt="Honda logo"></div>
+      <div class="brand-body">
+        <h2>Honda</h2>
+        <p>Known for smooth engines and longevity.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/honda/civic.jpg" alt="Honda Civic"><small>Civic — sport compact</small></div>
+          <div class="card"><img src="assests/cars/honda/accord.jpg" alt="Honda Accord"><small>Accord — family sedan</small></div>
+          <div class="card"><img src="assests/cars/honda/fitjaz.jpg" alt="Honda Fit"><small>Fit/Jazz — city hatch</small></div>
+          <div class="card"><img src="assests/cars/honda/crv.jpg" alt="Honda CR-V"><small>CR-V — SUV</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nissan -->
+    <section class="brand" id="nissan">
+      <div class="brand-logo"><img src="assests/japanese/nissan.png" alt="Nissan logo"></div>
+      <div class="brand-body">
+        <h2>Nissan</h2>
+        <p>Practical models with good spare parts availability.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/nissan/note.jpg" alt="Nissan Note"><small>Note — compact hatch</small></div>
+          <div class="card"><img src="assests/cars/nissan/x-trail.jpg" alt="Nissan X-Trail"><small>X-Trail — family SUV</small></div>
+          <div class="card"><img src="assests/cars/nissan/teana.jpg" alt="Nissan Teana"><small>Teana — city monster</small></div>
+          <div class="card"><img src="assests/cars/nissan/terrano.jpg" alt="Nissan Terrano"><small>Terrano — pickup/SUV</small></div>
+          <div class="card"><img src="assests/cars/nissan/leaf.jpg" alt="Nissan Leaf"><small>Leaf — electric option</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subaru -->
+    <section class="brand" id="subaru">
+      <div class="brand-logo"><img src="assests/japanese/subaru.png" alt="Subaru logo"></div>
+      <div class="brand-body">
+        <h2>Subaru</h2>
+        <p>Boxer engines and excellent all-wheel drive options.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/subaru/impreza.jpg" alt="Subaru Impreza"><small>Impreza — rally-bred</small></div>
+          <div class="card"><img src="assests/cars/subaru/forester.jpg" alt="Subaru Forester"><small>Forester — compact SUV</small></div>
+          <div class="card"><img src="assests/cars/subaru/outback.jpg" alt="Subaru Outback"><small>Outback — crossover</small></div>
+          <div class="card"><img src="assests/cars/subaru/XV.jpg" alt="Subaru XV"><small>XV — coupe</small></div>
+          <div class="card"><img src="assests/cars/subaru/legacy.jpg" alt="Subaru Legacy"><small>Legacy — sedan</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lexus -->
+    <section class="brand" id="lexus">
+      <div class="brand-logo"><img src="assests/japanese/lexus.png" alt="Lexus logo"></div>
+      <div class="brand-body">
+        <h2>Lexus</h2>
+        <p>Premium vehicles with refined comfort and reliability.</p>
+        <div class="gallery">
+          <div class="card"><img src="assests/cars/lexus/IS.jpg" alt="Lexus IS"><small>IS — compact luxury</small></div>
+          <div class="card"><img src="assests/cars/lexus/RX.jpg" alt="Lexus RX"><small>RX — luxury SUV</small></div>
+          <div class="card"><img src="assests/cars/lexus/es.jpg" alt="Lexus ES"><small>ES — executive sedan</small></div>
+          <div class="card"><img src="assests/cars/lexus/nx.jpg" alt="Lexus NX"><small>NX — compact SUV</small></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating WhatsApp Chat -->
+  <a class="whatsapp-float" href="https://wa.me/256778348461" target="_blank" aria-label="Chat on WhatsApp">
+    <span class="label">WhatsApp Me</span>
+  </a>
+
+  <!-- Scroll-to-top -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <img src="" alt="Car image">
+  </div>
+
+  <script>
+    // Scroll-to-top button logic
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) scrollBtn.classList.add('show'); else scrollBtn.classList.remove('show');
+    });
+    scrollBtn.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Lightbox viewer
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.style.display = 'none');
+  </script>
+</body>
+</html>
